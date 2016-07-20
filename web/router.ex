@@ -15,7 +15,7 @@ defmodule Hello.Router do
 
   scope "/", Hello do
     pipe_through :browser # Use the default browser stack
-    get "/hello", HelloController, :world
+    get "/hello/:name", HelloController, :world #create param :name to pass to controller
     get "/", PageController, :index
   end
 
